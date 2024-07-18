@@ -1,6 +1,6 @@
 # Pentesting-Cheat-sheet
 
-The various methodologies and tool involved in pentesting.
+The various methodologies and tools involved in pentesting.
 
 INFORMATION GATHERING
 
