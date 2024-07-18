@@ -37,3 +37,116 @@ nmap -p- target.com
 Script Scanning:
 
 nmap --script vuln target.com
+
+
+Masscan (Fast Port Scanner)
+
+    Basic Scan:
+
+masscan target.com -p1-65535 --rate=1000
+
+
+RustScan (Fast Port Scanner)
+
+    Basic Scan:
+
+rustscan -a target.com
+
+
+
+Vulnerability Scanning
+
+    Nmap NSE Scripts:
+        Heartbleed:
+
+        bash
+
+nmap --script ssl-heartbleed -p 443 target.com
+
+SMB Vulnerabilities:
+
+bash
+
+nmap --script smb-vuln* target.com
+
+HTTP Vulnerabilities:
+
+bash
+
+    nmap --script http-vuln* target.com
+
+OpenVAS:
+
+bash
+
+    openvas-start
+
+        Access via web interface and configure target.
+    Nessus:
+        Start Nessus service and access via web interface.
+        Configure and run a scan on target.com.
+
+Web Application Scanning
+
+    Nikto:
+
+    bash
+
+nikto -h target.com
+
+OWASP ZAP (Zed Attack Proxy):
+
+    Launch OWASP ZAP GUI.
+    Configure target and start scan.
+
+Arachni:
+
+bash
+
+    arachni http://target.com --output-only-positives
+
+Specific Protocol Scanning
+
+    FTP:
+
+    bash
+
+nmap -p 21 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor target.com
+
+SSH:
+
+bash
+
+nmap -p 22 --script ssh-hostkey,ssh-auth-methods target.com
+
+HTTP:
+
+bash
+
+nmap -p 80,443 --script http-enum,http-title,http-server-header target.com
+
+SMTP:
+
+nmap -p 25 --script smtp-commands,smtp-open-relay,smtp-vuln* target.com
+
+SNMP:
+
+    nmap -sU -p 161 --script snmp-info,snmp-netstat,snmp-processes target.com
+
+Banner Grabbing
+
+    Netcat:
+
+nc -v target.com 80
+
+    Type HEAD / HTTP/1.0 and press Enter twice.
+
+Telnet:
+
+telnet target.com 80
+
+    Type HEAD / HTTP/1.0 and press Enter twice.
+
+Nmap:
+
+nmap -sV --script banner target.com
