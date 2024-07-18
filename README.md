@@ -8,9 +8,9 @@ DNS Enumeration
 
     Basic DNS Lookup:
 
-    bash
+    bash 
+    nslookup target.com
 
-nslookup target.com
 DNS Zone Transfer Check:
 
 bash
@@ -23,17 +23,17 @@ Subdomain Enumeration
 
     bash
 
-sublist3r -d target.com
+    sublist3r -d target.com
 
 Assetfinder:
 
-bash
+     bash
 
-assetfinder --subs-only target.com
+     assetfinder --subs-only target.com
 
 Amass:
 
-bash
+     bash
 
     amass enum -d target.com
 
@@ -43,17 +43,17 @@ Google Dorking
 
     bash
 
-site:target.com inurl:admin
+    site:target.com inurl:admin
 
 Finding Login Pages:
 
-bash
+     bash
 
-site:target.com inurl:login
+     site:target.com inurl:login
 
 Exposed Documents:
 
-bash
+     bash
 
     site:target.com filetype:pdf
 
@@ -99,7 +99,7 @@ Metadata Extraction
 
     exiftool file.jpg
 
-    FOCA (Fingerprinting Organizations with Collected Archives): Use to extract metadata from public documents.
+FOCA (Fingerprinting Organizations with Collected Archives): Use to extract metadata from public documents.
 
 Open Ports and Services
 
@@ -107,11 +107,11 @@ Open Ports and Services
 
     bash
 
-nmap -sS -p- target.com
+     nmap -sS -p- target.com
 
 Masscan (Fast Port Scanner):
 
-bash
+     bash
 
     masscan target.com -p1-65535 --rate=1000
 
@@ -130,17 +130,18 @@ OSINT Frameworks and Tools
 
     bash
 
-spiderfoot -s target.com
+      spiderfoot -s target.com
+
 Recon-ng: A full-featured web reconnaissance framework.
 
-bash
+     bash
 
-recon-ng
+     recon-ng
 
 Shodan: Search engine for Internet-connected devices.
 
-bash
+     bash
 
-shodan search "target.com"
+     shodan search "target.com"
 
 
