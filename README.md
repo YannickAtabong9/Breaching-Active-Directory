@@ -1,4 +1,7 @@
 # Pentesting-Cheat-sheet
+
+The various methodologies and tool involved in pentesting.
+
 INFORMATION GATHERING
 
 WHOIS Lookup: whois target.com
