@@ -1,0 +1,25 @@
+Burp Suite
+
+    Comprehensive web vulnerability scanner and proxy tool.
+
+Hydra
+
+    Password cracking tool.
+
+Nikto
+
+    Web server scanning.
+
+WFuzz
+
+    Web application fuzzer.
+
+WhatWeb
+
+bash
+
+whatweb target.com
+
+Wappalyzer
+
+    Browser extension to identify technologies used by the target website.
