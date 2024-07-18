@@ -1,0 +1,8 @@
+Nikto
+
+nikto -h target.com
+
+
+
+Arachni
+arachni http://target.com --output-only-positives
