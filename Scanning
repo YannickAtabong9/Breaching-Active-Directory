@@ -1,4 +1,4 @@
-#Nmap
+Nmap
 
 nmap -sn target.com                # Ping scan
 nmap -sS target.com                # SYN scan
@@ -10,17 +10,17 @@ nmap -p- target.com                # Scan all ports
 nmap --script vuln target.com      # Script scanning
 
 
-#Masscan
+Masscan
 
 masscan target.com -p1-65535 --rate=1000
 
 
-#Unicornscan
+Unicornscan
 
 unicornscan -i eth0 -mT target.com:a
 
 
 
-#RustScan
+RustScan
 
 rustscan -a target.com
