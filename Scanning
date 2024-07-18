@@ -1,0 +1,39 @@
+Once you have discovered all the IPs (external or internal) you want to scan in depth, different actions can be performed.
+
+Nmap (Network Mapper)
+
+    Basic Ping Scan:
+
+           nmap -sn target.com
+
+SYN Scan:
+
+nmap -sS target.com
+
+Full TCP Scan:
+
+nmap -sT target.com
+
+Service Version Detection:
+
+nmap -sV target.com
+
+Operating System Detection:
+
+nmap -O target.com
+
+Aggressive Scan:
+
+nmap -A target.com
+
+Scan Specific Ports:
+
+nmap -p 22,80,443 target.com
+
+Scan All Ports:
+
+nmap -p- target.com
+
+Script Scanning:
+
+nmap --script vuln target.com
